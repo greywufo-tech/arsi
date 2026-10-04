@@ -1,0 +1,83 @@
+# =============================================================
+#  E-Jastip - .gitignore
+#  Aplikasi PHP + MySQL tanpa framework (tanpa Composer/npm)
+# =============================================================
+
+# ---------- Rahasia & konfigurasi lokal ----------
+.env
+.env.*
+!.env.example
+*.local.php
+config/config.local.php
+config/secrets.php
+config/secrets.json
+config/*.key
+config/*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# ---------- Credential GitHub ----------
+.github-token
+gh_token.txt
+.netrc
+_auth
+
+# ---------- Database: dump & backup ----------
+# CATATAN: database/schema.sql dan database/seed.php ADALAH source code
+# aplikasi, jadi TIDAK diabaikan.
+*.sql.gz
+*.sql.bak
+*.sql.zip
+*.dump
+*.dump.sql
+dump.sql
+dump-*.sql
+backup/
+backups/
+/database/backup/
+
+# ---------- Log ----------
+*.log
+logs/
+/storage/logs/
+
+# ---------- File runtime / upload pengguna ----------
+/public/uploads/*
+!/public/uploads/.gitkeep
+/public/storage/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+
+# ---------- Cache ----------
+/cache/
+/tmp/
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# ---------- Dependency (untuk developers yang memakai Composer/npm) ----------
+/vendor/
+/node_modules/
+composer.phar
+*.phar
+
+# ---------- Editor & OS ----------
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Hasil screenshot / testing (temporary) ----------
+/screenshots/
+/shot*.html
+
+# ---------- Transkrip percakapan asisten (bukan source aplikasi) ----------
+freebuff-chat-*.md
+.conversation/
